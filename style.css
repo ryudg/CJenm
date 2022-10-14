@@ -1,0 +1,101 @@
+/* css reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+header h1 {
+  position: absolute;
+  left: 40px;
+  top: 50px;
+  z-index: 1;
+}
+nav {
+  position: absolute;
+  right: 92px;
+  top: 56px;
+  z-index: 1;
+}
+nav a {
+  margin-left: 40px;
+  color: #fff;
+}
+nav a:hover {
+  color: #ccc;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: #ccc;
+}
+section {
+  outline: 1px solid #000;
+  width: 20%;
+  height: 100%;
+  float: left;
+  text-align: center;
+  font-weight: 500;
+  position: relative;
+}
+.title-group {
+  position: absolute;
+  width: 100%;
+  /*   left: calc(50% - 120px / 2); */
+  top: calc(50% - 222px / 2);
+}
+.title-group h1 {
+  font-size: 48px;
+  color: white;
+}
+.title-group p {
+  font-size: 20px;
+  color: white;
+}
+section h1 {
+  font-weight: 500;
+}
+.container section {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%);
+}
+.container section:nth-child(1) {
+  background-color: #1ab5c4;
+  background-image: url(./images/bg1.jpg);
+}
+.container section:nth-child(2) {
+  background-color: #1c5e64;
+  background-image: url(./images/bg2.jpg);
+}
+.container section:nth-child(3) {
+  background-color: #56bec7;
+  background-image: url(./images/bg3.jpg);
+}
+.container section:nth-child(4) {
+  background-color: #04484e;
+  background-image: url(./images/bg4.jpg);
+}
+.container section:nth-child(5) {
+  background-color: #a8e7ec;
+  background-image: url(./images/bg5.jpg);
+}
+
+/* filter: 0~100 흑백조정 */
+.container section:hover {
+  filter: grayscale(0);
+  transform: scale(1.1);
+  transition: 1s;
+}
+.container section:not(:hover) {
+  transition: 1s;
+}
+#sec1,
+#sec2 {
+  cursor: pointer;
+}
